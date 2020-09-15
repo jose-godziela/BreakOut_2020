@@ -2,26 +2,20 @@
 #define PLAYER_H
 #include "raylib.h"
 
-const int TOTAL_PLAYERS = 2;
-const int PLAYER1 = 0;
-const int PLAYER2 = 1;
 const float VEL_PLAYER = 385.0f;
-
+const int player_offset_y = 50;
 namespace Godziela_BreakOut
 {
 
 	struct Player {
 		Rectangle rec;
-		Vector2 size;
 		int score;
 		Color color;
-		int movement_up;
-		int movement_down;
 	};
 
-	extern Player players[TOTAL_PLAYERS];
+	extern Player player;
 
-	void init_players();
-	void reset_pos_players();
+	void init_player(Player& player);
+	void reset_pos_player(Player& player);
 }
 #endif

@@ -2,7 +2,6 @@
 
 namespace Godziela_BreakOut
 {
-	Brick brick[cant_bricks_horz][cant_bricks_vert];
 	//aux
 	short brick_y_offset = 50;
 

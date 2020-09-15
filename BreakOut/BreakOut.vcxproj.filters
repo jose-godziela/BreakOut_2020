@@ -25,6 +25,9 @@
     <ClCompile Include="bricks.cpp">
       <Filter>Entities</Filter>
     </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="player.h">
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="bricks.h">
       <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="manager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

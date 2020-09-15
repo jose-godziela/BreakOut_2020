@@ -19,7 +19,7 @@ namespace Godziela_BreakOut
 	extern Brick brick[cant_bricks_horz][cant_bricks_vert];
 
 
-
+	void init_bricks();
 
 }
 

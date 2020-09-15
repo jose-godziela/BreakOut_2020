@@ -2,7 +2,7 @@
 
 namespace Godziela_BreakOut
 {
-	void init_ball()
+	void init_ball(Ball& ball)
 	{
 		ball.ball_position_init.x = GetScreenWidth() / 2;
 		ball.ball_position_init.y = GetScreenHeight() / 2;
@@ -18,7 +18,7 @@ namespace Godziela_BreakOut
 		ball.p2_hit = false;
 	}
 
-	void reset_ball()
+	void reset_ball(Ball& ball)
 	{
 		ball.ball_position = ball.ball_position_init;
 	}

@@ -19,7 +19,7 @@ namespace Godziela_BreakOut
 	};
 
 	extern Ball ball;
-	void init_ball();
-	void reset_ball();
+	void init_ball(Ball& ball);
+	void reset_ball(Ball& ball);
 }
 #endif
