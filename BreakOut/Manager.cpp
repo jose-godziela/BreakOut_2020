@@ -15,6 +15,7 @@ namespace Godziela_BreakOut
 	Brick brick[cant_bricks_horz][cant_bricks_vert];
 	Player player;
 	Ball ball;
+	gameState game_state;
 
 	void init()
 	{
@@ -40,6 +41,28 @@ namespace Godziela_BreakOut
 
 		DrawText("Here should be the breakout game", GetScreenWidth() / 3 - 30, GetScreenHeight() / 2, GAME_FONT, RED);
 
+		switch (game_state)
+		{
+		case gameState::MENU:
+		{
+			//draw_menu();
+			//button_action();
+		}
+		break;
+		case gameState::GAME:
+		{
+			//draw_game();
+		}
+		break;
+		case gameState::CREDITS:
+		{
+			//draw_credits();
+		}break;
+		case gameState::CONTROL_SCREEN:
+		{
+			//draw_change_controls();
+		}break;
+		}
 
 		EndDrawing();
 	}
@@ -52,6 +75,12 @@ namespace Godziela_BreakOut
 	void deinit()
 	{
 
+	}
+
+	void reset()
+	{
+		reset_pos_player(player);
+		reset_ball(ball);
 	}
 
 	void start_game()

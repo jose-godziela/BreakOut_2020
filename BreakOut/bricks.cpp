@@ -21,4 +21,15 @@ namespace Godziela_BreakOut
 
 	}
 
+	void reset_bricks()
+	{
+		for (int i = 0; i < cant_bricks_horz; i++)
+		{
+			for (int j = 0; j < cant_bricks_vert; j++)
+			{
+				brick[i][j].active = true;
+			}
+		}
+	}
+
 }

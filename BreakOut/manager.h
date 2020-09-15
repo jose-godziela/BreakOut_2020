@@ -21,5 +21,16 @@ const int GAME_FONT = 20;
 namespace Godziela_BreakOut
 {
 	void start_game();
+
+
+	enum class gameState
+	{
+		MENU,
+		GAME,
+		CREDITS,
+		CONTROL_SCREEN
+	};
+
+	extern gameState game_state;
 }
 #endif
