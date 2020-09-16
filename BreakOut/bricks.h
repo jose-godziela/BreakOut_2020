@@ -1,26 +1,34 @@
-#ifndef BRICKS_H
-#define BRICKS_H
-#include "raylib.h"
+#ifndef BRICK_H
+#define BRICK_H
 
-const int cant_bricks_vert = 5;
-const int cant_bricks_horz = 20;
-const int BRICKS_WIDTH = 40;
-const int RANDOM_POWER_UP_SET = 30;
+#include "Raylib.h"
 
-namespace Godziela_BreakOut
+namespace Godziela
 {
-	struct Brick
-	{
-		Vector2 position;
-		Vector2 size;
+	const int cant_bricks = 80;
+	const Vector2 pos_inic = { 10,20 };
+	const int brick_height = 15;
+	const int brick_width = 20;
+	const int dist_x = 40;
+	const int dist_y = 30;
+
+
+
+	struct Brick {
+		Rectangle rec;
 		bool active;
+		Image img;
+		Texture2D texture;
 	};
 
-	extern Brick brick[cant_bricks_horz][cant_bricks_vert];
+	extern Brick bricks[cant_bricks];
+	extern int screen_width_check;
+	extern Color brick_color;
 
 
 	void init_bricks();
-
+	void draw_bricks();
+	void reset_bricks();
 }
 
 
