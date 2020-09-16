@@ -2,24 +2,24 @@
 #define BALL_H
 #include "raylib.h"
 
-namespace Godziela_BreakOut
-{
+#include "Player.h"
 
+namespace Godziela
+{
+	//Personal Prefference when writing structs
 	struct Ball {
-		Vector2 ball_position;
 		Vector2 ball_position_init;
-		Vector2 ball_speed;
+		Vector2 ball_position;
 		Vector2 ball_speed_init;
+		Vector2 ball_speed;
 		float ball_radius;
 		Color color;
-		bool active;
-		bool p1_hit;
-		bool p2_hit;
-		int power_up;
+		Texture2D texture;
+		Image img;
 	};
-
 	extern Ball ball;
-	void init_ball(Ball& ball);
-	void reset_ball(Ball& ball);
+	void init_ball();
+	void reset_ball();
 }
+
 #endif
