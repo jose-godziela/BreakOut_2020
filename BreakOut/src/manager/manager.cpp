@@ -2,6 +2,7 @@
 
 namespace Godziela
 {
+
 	Color base_background;
 
 	static void init();
@@ -100,7 +101,6 @@ namespace Godziela
 
 	static void close_texture()
 	{
-		//When the game has some texture, here's the Unload of them
 		UnloadTexture(background_texture);
 		UnloadTexture(player.texture);
 		UnloadTexture(ball.texture);
@@ -113,8 +113,6 @@ namespace Godziela
 
 	static void close_all()
 	{
-		//When the game has some audio, these are the close variables
-		//If hit_sound error is solved
 		close_audio();
 		close_texture();
 		CloseWindow();
@@ -148,7 +146,7 @@ namespace Godziela
 
 	void init()
 	{
-		InitWindow(screenWidth, screenHeight, "Arkanoid");
+		InitWindow(screenWidth, screenHeight, "BreakOut");
 		SetExitKey(NULL);
 
 		//frames = 0;

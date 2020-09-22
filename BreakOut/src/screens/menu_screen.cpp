@@ -23,9 +23,9 @@ namespace Godziela
 		title_font_size = 40;
 		DrawText("Arkanoid", static_cast<int>(GetScreenWidth() / title_divider), posY, title_font_size, RAYWHITE);
 
-		DrawText("Play", static_cast<int>(buttons[2].x + offside), static_cast<int>(buttons[2].y), font_size, DARKBROWN);
+		DrawText("Play",	static_cast<int>(buttons[2].x + offside), static_cast<int>(buttons[2].y), font_size, DARKBROWN);
 		DrawText("Credits", static_cast<int>(buttons[1].x + offside_credits), static_cast<int>(buttons[1].y), font_size, DARKBROWN);
-		DrawText("Exit", static_cast<int>(buttons[0].x + offside), static_cast<int>(buttons[0].y),font_size,DARKBROWN);
+		DrawText("Exit",	static_cast<int>(buttons[0].x + offside), static_cast<int>(buttons[0].y),font_size,DARKBROWN);
 	}
 	void update_menu()
 	{
