@@ -125,8 +125,8 @@
       <Command>copy "$(SolutionDir)Raylib\bin\raylib.dll" "$(OutDir)"
 mkdir "$(OutDir)\res"
 mkdir "$(OutDir)\res\music"
-xcopy "$(SolutionDir)res" "$(OutDir)\res"
-xcopy "$(SolutionDir)res\music" "$(OutDir)\res\music"
+xcopy "$(SolutionDir)res" "$(OutDir)\res" /y
+xcopy "$(SolutionDir)res\music" "$(OutDir)\res\music" /y
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -153,8 +153,8 @@ xcopy "$(SolutionDir)res\music" "$(OutDir)\res\music"
       <Command>copy "$(SolutionDir)Raylib\bin\raylib.dll" "$(OutDir)"
 mkdir "$(OutDir)\res"
 mkdir "$(OutDir)\res\music"
-xcopy "$(SolutionDir)res" "$(OutDir)\res"
-xcopy "$(SolutionDir)res\music" "$(OutDir)\res\music"
+xcopy "$(SolutionDir)res" "$(OutDir)\res" /y
+xcopy "$(SolutionDir)res\music" "$(OutDir)\res\music" /y
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

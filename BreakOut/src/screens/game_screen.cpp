@@ -66,8 +66,6 @@ namespace Godziela
 			}
 			//Player-Ball Collition
 			if (CheckCollisionCircleRec(ball.ball_position, ball.ball_radius, player.rec)) {
-				//In case that the sound problem gets resolved
-				PlaySound(hit_sound);
 
 				//Collision with the player
 				if (CheckCollisionCircleRec(ball.ball_position, ball.ball_radius, player.rec))
@@ -75,6 +73,8 @@ namespace Godziela
 					ball.ball_speed.y = -ball.ball_speed.y;
 					ball.ball_speed.x = (ball.ball_position.x - player.rec.x - player.rec.width / 2) / (player.rec.width / 2) * multiplier;
 					ball.ball_position.y -= ball.ball_radius;
+					if(game_start)
+						PlaySound(hit_sound);
 				}
 
 			}
@@ -93,7 +93,6 @@ namespace Godziela
 			//Ball-Bricks collitions
 			for (int i = 0; i < cant_bricks; i++)
 			{
-				PlaySound(hit_sound);
 
 				if (CheckCollisionCircleRec(ball.ball_position, ball.ball_radius, bricks[i].rec) && bricks[i].active == true)
 				{
@@ -103,6 +102,7 @@ namespace Godziela
 					ball.ball_speed.y -= speed_up * GetFrameTime();
 					ball.ball_position.y -= ball.ball_radius;
 					player.score++;
+					PlaySound(hit_sound);
 				}
 			}
 		}
