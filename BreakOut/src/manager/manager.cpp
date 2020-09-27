@@ -55,6 +55,7 @@ namespace Godziela
 				reset_bricks();
 				reset_ball();
 				game_state = MENU;
+				StopMusicStream(background_music);
 			}
 
 			return;
