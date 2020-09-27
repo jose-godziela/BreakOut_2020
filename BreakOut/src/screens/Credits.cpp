@@ -28,7 +28,7 @@ namespace Godziela
 		//
 
 		aux++;
-		if (aux >= time)
+		if (aux >= time || IsKeyPressed(KEY_ESCAPE))
 		{
 			game_state = MENU;
 			aux = 0;
